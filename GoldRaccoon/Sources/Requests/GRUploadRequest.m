@@ -45,6 +45,7 @@
     self.listingRequest = [[GRListingRequest alloc] initWithDelegate:self datasource:self];
 	self.listingRequest.passiveMode = self.passiveMode;
     self.listingRequest.path = [self.path stringByDeletingLastPathComponent];
+  self.listingRequest.uploadRequestUUID = self.uuid;
     [self.listingRequest start];
 }
 

@@ -94,9 +94,9 @@
     }
     
     CFWriteStreamRef writeStreamRef = CFWriteStreamCreateWithFTPURL(NULL, ( __bridge CFURLRef) request.fullURL);
-    CFWriteStreamSetProperty(writeStreamRef,
-                             kCFStreamPropertyFTPAttemptPersistentConnection,
-                             kCFBooleanFalse);
+//    CFWriteStreamSetProperty(writeStreamRef,
+//                             kCFStreamPropertyFTPAttemptPersistentConnection,
+//                             kCFBooleanFalse);
     
     CFWriteStreamSetProperty(writeStreamRef, kCFStreamPropertyShouldCloseNativeSocket, kCFBooleanTrue);
 	CFWriteStreamSetProperty(writeStreamRef, kCFStreamPropertyFTPUsePassiveMode, request.passiveMode ? kCFBooleanTrue :kCFBooleanFalse);

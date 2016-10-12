@@ -100,6 +100,7 @@
 
 - (BOOL)cancelRequest:(GRRequest *)request
 {
+  [request cancelRequest];
     return [self.requestQueue removeObject:request];
 }
 
@@ -309,9 +310,9 @@
     }
     if ([self.currentRequest isKindOfClass:[GRUploadRequest class]]) {
         NSString *localFilepath = ((GRUploadRequest *)self.currentRequest).localFilePath;
-        _currentUploadData = [NSData dataWithContentsOfFile:localFilepath];
+      _currentUploadData = [NSData dataWithContentsOfFile:localFilepath options:NSDataReadingMappedAlways error:nil];
     }
-    
+  
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.currentRequest start];
     });

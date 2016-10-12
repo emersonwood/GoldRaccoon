@@ -21,4 +21,6 @@
 
 - (BOOL)fileExists:(NSString *)fileNamePath;
 
+@property (nonatomic, strong, readwrite) NSString *uploadRequestUUID;
+
 @end
