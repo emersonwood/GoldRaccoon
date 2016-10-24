@@ -57,11 +57,11 @@
             break;
             
         case kGRFTPClientFileAlreadyExists:
-            errorMessage = @"File already exists!";
+            errorMessage = @"File already exists.";
             break;
             
         case kGRFTPClientCantOverwriteDirectory:
-            errorMessage = @"Can't overwrite directory!";
+            errorMessage = @"Can't overwrite directory.";
             break;
             
         case kGRFTPClientStreamTimedOut:
@@ -94,7 +94,7 @@
             break;
             
         case kGRFTPServerStorageAllocationExceeded:
-            errorMessage = @"Server allocation exceeded!";
+            errorMessage = @"Server allocation exceeded.";
             break;
             
         case kGRFTPServerIllegalFileName:
@@ -106,11 +106,11 @@
             break;
             
         case kGRFTPServerUnknownError:
-            errorMessage = @"Unknown FTP error!";
+            errorMessage = @"Unknown FTP error.";
             break;
             
         default:
-            errorMessage = @"Unknown error!";
+            errorMessage = @"Unknown error.";
             break;
     }
     
